@@ -1,0 +1,28 @@
+.menuContainer {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuContainer a {
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.menuContainer a:hover {
+  color: rgba(245, 245, 245, 0.6);
+  cursor: pointer;
+}
+
+.menuIcon {
+  padding: 10px;
+}
