@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './navbar.module.scss'
+import Link from 'next/link'
 
 const NavBar = () => {
 
@@ -15,11 +16,17 @@ const NavBar = () => {
     <div>
       <span className={`material-icons ${styles.menuIcon}`} onMouseEnter={hoverOpen}>menu</span>
       <div className={styles.menuContainer} onMouseLeave={hoverClose}>
-        <a>Home</a>
-        <a>About Me</a>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/about">
+          <a>About Me</a>
+        </Link>
+        <Link href="/resume">
+          <a>Resume</a>
+        </Link>
         <a href="https://github.com/chapmanm3" target="_blank" rel="noopener noreferrer">Github</a>
         <a href="https://linkedin.com/in/matt-chapman1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a>Other Bullet lol</a>
       </div>
     </div>
   );
