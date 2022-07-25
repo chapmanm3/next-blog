@@ -1,0 +1,26 @@
+.dropDownContainer {
+  border: solid 3px rgba(20, 20, 20, 1);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: min(90%, 70vw);
+}
+
+.titleCard {
+  height: 50px;
+  background: rgba(20, 20, 20, 1);
+  border-radius: 5px;
+}
+
+.titleTextContainer {
+  padding-left: 10px;
+}
+
+.titleTextContainer:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bodyContainer {
+  padding: 10px;
+}
