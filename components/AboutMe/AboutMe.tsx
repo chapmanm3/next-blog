@@ -9,10 +9,10 @@ const AboutMe = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <p>Hi my names Matt and I'm a Full Stack / Web Developer from the Boston
+        <p>Hi my names Matt and I&lsquo;m a Full Stack / Web Developer from the Boston
         area. I specialize in Javascript with React as my framework of choice at the moment
-        I'm currently open to full time and contract opportunities so please
-        reachout if you'd like to work with me</p>
+        I&lsquo;m currently open to full time and contract opportunities so please
+        reach out if you&lsquo;d like to chat!</p>
       </div>
       <div className={styles.imageContainer}>
         <Image
