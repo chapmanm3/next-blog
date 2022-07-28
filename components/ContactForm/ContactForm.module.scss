@@ -1,0 +1,17 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.form label {
+  padding-top: 20px;
+}
