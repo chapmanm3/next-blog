@@ -44,7 +44,7 @@ const ContactForm = () => {
         <input onChange={emailChange} type="email" id="email" name="email" required />
         <label htmlFor="message">Say Hi</label>
         <textarea onChange={messageChange} name="message" rows={10} />
-        <button type="submit">Submit</button>
+        <button type="submit" className={styles.submitButton}>Submit</button>
       </form>
       {formSuccess && <p>Success!</p>}
       {formFailure && <p>Form submission failed</p>}
