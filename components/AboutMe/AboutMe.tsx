@@ -1,5 +1,5 @@
 import React from 'react'
-import profilePic from '../../public/profile.jpg'
+import profilePic from '../../public/profile.png'
 import Image from 'next/image'
 import styles from './AboutMe.module.scss'
 

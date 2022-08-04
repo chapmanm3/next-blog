@@ -6,13 +6,28 @@ const ContactForm = () => {
 
   const [ formSuccess, setFormSuccess ] = useState(false)
   const [ formFailure, setFormFailure ] = useState(false)
+  const [ name, setName ] = useState<string>('')
+  const [ email, setEmail ] = useState<string>('')
+  const [ message, setMessage ] = useState<string>('')
 
-  const handleSubmit = (event) => {
+  const nameChange = (event: React.FormEvent<HTMLInputElement>) => {
+    setName(event.currentTarget.value)
+  }
+
+  const emailChange = (event: React.FormEvent<HTMLInputElement>) => {
+    setEmail(event.currentTarget.value)
+  }
+
+  const messageChange = (event: React.FormEvent<HTMLTextAreaElement>) => {
+    setMessage(event.currentTarget.value)
+  }
+
+  const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault()
     const formData = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value
+      name,
+      email,
+      message
     }
     const endPoint = '/api/contactForm'
     axios.post(endPoint, formData)
@@ -24,11 +39,11 @@ const ContactForm = () => {
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label htmlFor="name">Name</label> 
-        <input type="text" id="name" name="name" required minLength={2} />
+        <input onChange={nameChange} type="text" id="name" name="name" required minLength={2} />
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <input onChange={emailChange} type="email" id="email" name="email" required />
         <label htmlFor="message">Say Hi</label>
-        <textarea name="message" rows={10} />
+        <textarea onChange={messageChange} name="message" rows={10} />
         <button type="submit">Submit</button>
       </form>
       {formSuccess && <p>Success!</p>}

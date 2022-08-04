@@ -4,9 +4,10 @@ import styles from './dropdown.module.scss'
 interface DropDownProps {
   title: string
   body?: string
+  children?: React.ReactNode
 }
 
-const DropDown: React.FC<DropDownProps> = ({ title, body, children, ...props }) => {
+const DropDown = ({ title, body, children, ...props }: DropDownProps) => {
   const [ open, setOpen ] = useState<boolean>(false)
 
   const clickHandler = () => {

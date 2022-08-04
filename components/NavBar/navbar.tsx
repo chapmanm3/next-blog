@@ -5,11 +5,13 @@ import Link from 'next/link'
 const NavBar = () => {
 
   const hoverOpen = () => {
-    document.getElementsByClassName(styles.menuContainer)[0].style.width = "200px"
+    let elm = document.getElementsByClassName(styles.menuContainer)[0] as HTMLElement
+    elm.style.width = '200px'
   }
 
   const hoverClose = () => {
-    document.getElementsByClassName(styles.menuContainer)[0].style.width = "0px"
+    let elm = document.getElementsByClassName(styles.menuContainer)[0] as HTMLElement
+    elm.style.width = '0px'
   }
 
   return (

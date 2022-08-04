@@ -13,7 +13,7 @@ const WhoopExp = () => {
         <li>Architected and implemented new testing and monitoring strategies to prevent internationalization related regressions</li>
         <li>Developed internal UI to view screenshots from integration test runs across all tech stacks in order for relevant non techincal stakeholders to quickly gain perinent insight</li>
         <li>Embedded self in other teams to evangelize internationalization best practices and ensure teams were set up adequately</li>
-        <li>Internationalized common web components library to ensure interoprability with implementing repo's existing internationalization configuration</li>
+        <li>Internationalized common web components library to ensure interoprability with implementing repo&apos;s existing internationalization configuration</li>
       </ul>
     </DropDown>
   )

@@ -1,4 +1,5 @@
 const sgMail = require('@sendgrid/mail')
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 function sendMail(message: string) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -12,10 +13,10 @@ function sendMail(message: string) {
 
   sgMail.send(msg)
     .then(() => console.log('Contact sent successfully'))
-    .catch((error) => console.error(error))
+    .catch((error: Error | string) => console.error(error))
 }
 
-export default function handler(req, res) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<{data: string}>) {
 
   const body = req.body;
 
