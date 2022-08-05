@@ -8,7 +8,7 @@ const ResumePage: NextPage = () => {
     <>
       <Head>
         <title>Matt Chapmans&apos;s Resume Page</title>
-        <meta name="description" content="My Resume page with dropdown&apos;s containing my work experience, current tech stack, and education">
+        <meta name="description" content="My Resume page with dropdown&apos;s containing my work experience, current tech stack, and education" />
       </Head>
       <Resume /> 
     </>

@@ -9,7 +9,7 @@ const HomePage: NextPage = () => {
     <div className={styles.page}>
       <Head>
         <title>Matt Chapmans&apos;s personal site</title>
-        <meta name="description" content="The personal site for Matt Chapman a web developer from Boston, MA.">
+        <meta name="description" content="The personal site for Matt Chapman a web developer from Boston, MA." />
       </Head>
       <AboutMe />
     </div>
