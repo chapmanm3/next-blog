@@ -8,6 +8,7 @@ const ContactPage: NextPage = () => {
     <div className={styles.page}>
       <Head>
         <title>Matt Chapmans&apos;s personal site contact form</title>
+        <meta name="description" content="My personal contact me form which you can fill out if you would like to reach me.">
       </Head>
       <ContactForm />
     </div>
