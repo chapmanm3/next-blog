@@ -24,9 +24,7 @@ const NavBar = () => {
         <Link href="/resume">
           <a>Resume</a>
         </Link>
-        <Link href="/contact">
-          <a>Contact Me</a>
-        </Link>
+        <a href='mailto:mattchapmantech@gmail.com' target="_blank" rel="noopener noreferrer" >Contact Me</a>
         <a href="https://github.com/chapmanm3" target="_blank" rel="noopener noreferrer">Github</a>
         <a href="https://linkedin.com/in/matt-chapman1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
