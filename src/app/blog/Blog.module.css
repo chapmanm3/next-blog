@@ -1,0 +1,23 @@
+.page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 60px;
+  flex-direction: column;
+}
+
+.titleText {
+
+}
+
+.postWrapper {
+  padding: 8px 16px;
+  border-bottom: solid 1px #242424;
+}
+
+.link {
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

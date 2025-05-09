@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import styles from './navbar.module.scss'
 import Link from 'next/link'
+import { CgMenu } from "react-icons/cg"
 
 const NavBar = () => {
 
@@ -16,15 +19,20 @@ const NavBar = () => {
 
   return (
     <div>
-      <span className={`material-icons ${styles.menuIcon}`} onMouseEnter={hoverOpen}>menu</span>
+      <CgMenu style={{ margin: "4px" }} onMouseEnter={hoverOpen} />
       <div className={styles.menuContainer} onMouseLeave={hoverClose}>
         <Link href="/">
-          <a>Home</a>
+          Home
+        </Link>
+        <Link href="/blog">
+          Blog
         </Link>
         <Link href="/resume">
-          <a>Resume</a>
+          Resume
         </Link>
-        <a href='mailto:mattchapmantech@gmail.com' target="_blank" rel="noopener noreferrer" >Contact Me</a>
+        <Link href="/contact">
+          Contact Me
+        </Link>
         <a href="https://github.com/chapmanm3" target="_blank" rel="noopener noreferrer">Github</a>
         <a href="https://linkedin.com/in/matt-chapman1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>

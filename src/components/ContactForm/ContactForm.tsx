@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import styles from './ContactForm.module.scss'
 import axios from 'axios'
