@@ -1,4 +1,3 @@
-
 export type GetPostResponse = {
   items: Array<{
     metadata: {},
@@ -20,7 +19,6 @@ export type PostDetails = {
 
 const mapPostDetails = (postResponse: GetPostResponse): PostDetails => {
   const post = postResponse.items[0]
-  console.log("Post Content: ", post.fields.content)
   return {
     title: post.fields.title,
     slug: post.fields.slug,
@@ -30,7 +28,6 @@ const mapPostDetails = (postResponse: GetPostResponse): PostDetails => {
 
 
 export async function getPost(slug: string): Promise<PostDetails> {
-  console.log("Slug: ", slug)
   const data = await fetch(
     `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?content_type=pageBlogPost&fields.slug[match]=${slug}`,
     {

@@ -2,8 +2,7 @@ import { getAllPosts } from "../../../queries/getAllPosts"
 import { getPost } from "../../../queries/getPost"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import styles from './BlogPost.module.css'
-import Link from "next/link"
-
+import BackButton from "../../../components/BackButton"
 
 export async function generateStaticParams() {
   const posts = await getAllPosts()
@@ -19,7 +18,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className={styles.page}>
-      <Link className={styles.link} href="./">Back to Blogs</Link>
+      <BackButton className={styles.link} text="Back to Blogs" />
       <h3>{post.title}</h3>
       <div className={styles.content}>
         {documentToReactComponents(post.content as any)}
