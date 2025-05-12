@@ -18,10 +18,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className={styles.page}>
-      <BackButton className={styles.link} text="Back to Blogs" />
-      <h3>{post.title}</h3>
-      <div className={styles.content}>
-        {documentToReactComponents(post.content as any)}
+      <div className={styles.blogContainer}>
+        <BackButton className={styles.link} text="Back to Blogs" />
+        <h3>{post.title}</h3>
+        <div className={styles.content}>
+          {documentToReactComponents(post.content as any)}
+        </div>
       </div>
     </div>
   )
