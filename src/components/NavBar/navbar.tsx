@@ -30,7 +30,7 @@ const NavBar = () => {
         <Link href="/resume">
           Resume
         </Link>
-        <Link href="/contact">
+        <Link href="mailto:mattchapmantech@gmail.com" target="_blank" rel="noopener noreferrer">
           Contact Me
         </Link>
         <a href="https://github.com/chapmanm3" target="_blank" rel="noopener noreferrer">Github</a>
