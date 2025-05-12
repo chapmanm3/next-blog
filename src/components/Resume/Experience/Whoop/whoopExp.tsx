@@ -3,7 +3,7 @@ import DropDown from '../../../DropDown/dropDown'
 const WhoopExp = () => {
 
   return (
-    <DropDown title={"Whoop | SE"}>
+    <DropDown title={"Whoop | SE2"}>
       <ul>
         <li>Worked as the primary web developer on the Internationalization team directly creating and implementing best practices around internationalizating web properties</li>
         <li>Took on a legacy Angular1 codebase to ensure a key web property was properly internationalized</li>
