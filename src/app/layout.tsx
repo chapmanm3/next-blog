@@ -1,7 +1,6 @@
-import { Metadata } from "next";
 import { Miriam_Libre } from "next/font/google"
 import React from "react";
-import NavBar from "../components/NavBar/navbar";
+import { NavBar } from "../components/NavBar/navbar";
 
 import '../styles/globals.css'
 

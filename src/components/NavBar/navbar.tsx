@@ -1,26 +1,12 @@
-'use client'
-
 import React from 'react'
 import styles from './navbar.module.scss'
 import Link from 'next/link'
-import { CgMenu } from "react-icons/cg"
 
-const NavBar = () => {
-
-  const hoverOpen = () => {
-    let elm = document.getElementsByClassName(styles.menuContainer)[0] as HTMLElement
-    elm.style.width = '200px'
-  }
-
-  const hoverClose = () => {
-    let elm = document.getElementsByClassName(styles.menuContainer)[0] as HTMLElement
-    elm.style.width = '0px'
-  }
+export function NavBar() {
 
   return (
-    <div>
-      <CgMenu style={{ margin: "4px" }} onMouseEnter={hoverOpen} />
-      <div className={styles.menuContainer} onMouseLeave={hoverClose}>
+    <div className={styles.menuWrapper}>
+      <div className={styles.menuContainer}>
         <Link href="/">
           Home
         </Link>
@@ -39,5 +25,3 @@ const NavBar = () => {
     </div>
   );
 }
-
-export default NavBar
