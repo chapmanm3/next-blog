@@ -3,12 +3,14 @@ import DropDown from '../DropDown/dropDown'
 import styles from './resume.module.scss'
 import WhoopExp from './Experience/Whoop/whoopExp'
 import BisExp from './Experience/14BisAero/14bisAero'
+import { DKExp } from './Experience/Draftkings/DkExp'
 
 const Resume = () => {
   
   return (
     <div className={styles.resumeContainer}>
         <DropDown title={"Experience"}>
+          <DKExp />
           <WhoopExp />
           <BisExp />
         </DropDown>
