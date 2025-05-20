@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts } from "../../queries/getAllPosts";
 
 import styles from "./Blog.module.css"
-
+import { blogEntries } from "./blogEntries";
 
 export const metadata: Metadata = {
   title: "A blog about what I am currently building",
@@ -11,8 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default async function BlogPage() {
-
-  const posts = await getAllPosts()
+  const posts = blogEntries
 
   return (
     <div className={styles.page}>
