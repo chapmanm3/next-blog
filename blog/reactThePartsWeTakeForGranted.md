@@ -1,6 +1,7 @@
 # React: The parts we take for granted
 
-When using React in our day to day web developer lives its often we take certain things React gives us for granted or over look them. I wanted to take some time to dive a bit deeper into React myself and outline a few things that in React "just work", but really take some lifting under the hood to get done.
+When using React in our day to day web developer lives its often we take certain things React gives us for granted or over look them. 
+I wanted to take some time to dive a bit deeper into React myself and outline a few things that in React "just work", but really take some lifting under the hood to get done.
 
 ### JSX
 ---
@@ -24,11 +25,17 @@ button.onClick = function () {
   button.text = "Try Again"
 }`
 
-Again in this Angular example you'd have to have a separate HTML file which initializes the button, and attaches the buttons text to the above variable we just created. Now with React we can have our JS create our HTML for us:
+Again in this Angular example you'd have to have a separate HTML file which initializes the button, and attaches the buttons 
+text to the above variable we just created. Now with React we can have our JS create our HTML for us:
 
 `function Button() {
   return (<button>Try Again</button>);
 }`
 
-In React's original docs introducing [JSX](https://legacy.reactjs.org/docs/introducing-jsx.html) they callout that the intention behind JSX was to provide an alternative solution to code structure than what was currently available.
-Current solutions at the time split code by technology (html vs JS) whereas with JSX your html and js are now combined allowing you to separate code by concerns or however else you want.
+In React's original docs introducing [JSX](https://legacy.reactjs.org/docs/introducing-jsx.html) they callout that the intention behind JSX was to provide 
+an alternative solution to code structuring than what was currently available. Current solutions at the time split code by technology (html vs JS) whereas 
+with JSX your html and js are now combined allowing you to separate code by concerns or however else you want. Now this is not a blog post solely about JSX
+so I will leave it at that, but I belive it is hard to understate just how much this change is taken for granted. Before React JSX did not exist, 
+and after React JSX very well may be the way the majority of web developers think and reason about code structuring. React's delivery of JSX did 
+in fact shakeup and redefine and entire industry and it has become so intertwined with everyday web development that typically you don't ever think about it.
+
