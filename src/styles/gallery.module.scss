@@ -1,0 +1,318 @@
+// ─── Login / Password Gate ───────────────────────────────────────────────────
+
+.loginMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 62px);
+}
+
+.loginContainer {
+  text-align: center;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 2rem;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1c1c1c;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #c9a96e;
+  }
+}
+
+.formError {
+  color: #e57373;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #c9a96e;
+  color: #101010;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover:not(:disabled) {
+    background: #d4b97e;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+// ─── Gallery main layout ──────────────────────────────────────────────────────
+
+.galleryMain {
+  padding: 0 0 4rem;
+}
+
+.galleryShell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.galleryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0 1.25rem;
+
+  h1 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+}
+
+.logoutBtn {
+  background: transparent;
+  border: 1px solid #2e2e2e;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: #555;
+    color: white;
+  }
+}
+
+// ─── Tag filter ───────────────────────────────────────────────────────────────
+
+.tagFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.tagChip {
+  padding: 0.35rem 1rem;
+  background: #1c1c1c;
+  border: 1px solid #2e2e2e;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+
+  &:hover {
+    background: #252525;
+    color: white;
+  }
+}
+
+.tagChipActive {
+  background: #c9a96e;
+  border-color: #c9a96e;
+  color: #101010;
+  font-weight: 600;
+
+  &:hover {
+    background: #d4b97e;
+    border-color: #d4b97e;
+  }
+}
+
+// ─── Photo grid ───────────────────────────────────────────────────────────────
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.photoItem {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #1c1c1c;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+
+  &:hover .thumbImg {
+    transform: scale(1.05);
+  }
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.thumbPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: #1c1c1c;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.loadingState {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.emptyState {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 5rem 0;
+  margin: 0;
+}
+
+// ─── Lightbox ─────────────────────────────────────────────────────────────────
+
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightboxImg {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightboxLoading {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  padding: 6rem;
+}
+
+.lightboxClose {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(16, 16, 16, 0.7);
+  border: 1px solid #444;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background 0.15s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.lightboxNav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(16, 16, 16, 0.7);
+  border: 1px solid #444;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background 0.15s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.lightboxPrev {
+  left: 1.25rem;
+}
+
+.lightboxNext {
+  right: 1.25rem;
+}
