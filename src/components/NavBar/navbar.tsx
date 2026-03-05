@@ -16,6 +16,9 @@ export function NavBar() {
         <Link href="/resume">
           Resume
         </Link>
+        <Link href="/gallery">
+          Wedding Gallery
+        </Link>
         <Link href="mailto:mattchapmantech@gmail.com" target="_blank" rel="noopener noreferrer">
           Contact Me
         </Link>
