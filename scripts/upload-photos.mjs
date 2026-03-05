@@ -32,6 +32,7 @@
  */
 
 import { S3Client, PutObjectCommand, GetObjectCommand } from '@aws-sdk/client-s3'
+import sharp from 'sharp'
 import { readdir, readFile, stat } from 'fs/promises'
 import { existsSync, readFileSync } from 'fs'
 import path from 'path'
@@ -51,16 +52,6 @@ if (existsSync(envPath)) {
     const val = trimmed.slice(eqIdx + 1).trim().replace(/^["']|["']$/g, '')
     if (!process.env[key]) process.env[key] = val
   }
-}
-
-// ── Lazy-load sharp (must be installed separately) ───────────────────────────
-let sharp
-try {
-  sharp = (await import('sharp')).default
-} catch {
-  console.error('Error: sharp is not installed.')
-  console.error('Run: npm install sharp  (inside the scripts/ folder or globally)')
-  process.exit(1)
 }
 
 // ── R2 client ─────────────────────────────────────────────────────────────────
