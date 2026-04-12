@@ -18,15 +18,30 @@ const DropDown = ({ title, body, children, ...props }: DropDownProps) => {
 
   return (
     <div className={styles.dropDownContainer}>
-      <div className={styles.titleCard} onClick={clickHandler}>
+      <button 
+        className={styles.titleCard} 
+        onClick={clickHandler}
+        aria-expanded={open}
+      >
         <h3 className={styles.titleTextContainer}>
           {title}      
         </h3>
+        <svg 
+          className={styles.chevron}
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <div className={`${styles.content} ${open ? styles.open : ''}`}>
+        {body && <p className={styles.bodyContainer}>{body}</p>}
+        {children}
       </div>
-      {body && open &&
-      <p className={styles.bodyContainer}>{body}</p>}
-      {children && open &&
-      children}
     </div>
   )
 }

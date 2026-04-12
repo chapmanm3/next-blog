@@ -1,25 +1,86 @@
 .dropDownContainer {
-  border: solid 3px rgba(20, 20, 20, 1);
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  width: min(90%, 70vw);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .titleCard {
-  background: rgba(20, 20, 20, 1);
-  border-radius: 5px;
-}
-
-.titleTextContainer {
-  padding-left: 10px;
-}
-
-.titleTextContainer:hover {
-  text-decoration: underline;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.titleCard:hover {
+  background: var(--bg-tertiary);
+}
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.titleCard[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border-top: 1px solid transparent;
+}
+
+.content.open {
+  max-height: 2000px;
+  border-top: 1px solid var(--border);
 }
 
 .bodyContainer {
-  padding: 10px;
+  padding: 1.25rem 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.content ul {
+  padding: 1rem 1.5rem 1.25rem 2.5rem;
+  margin: 0;
+  list-style: none;
+}
+
+.content li {
+  position: relative;
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content li::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 1rem;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.titleTextContainer {
+  font-size: 1.1rem;
 }

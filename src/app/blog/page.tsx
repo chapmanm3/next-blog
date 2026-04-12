@@ -1,12 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
 import styles from "./Blog.module.css"
 import { blogEntries } from "./blogEntries";
 
 export const metadata: Metadata = {
-  title: "A blog about what I am currently building",
-  description: "My blog for writting about what I am working on and other opinions"
+  title: "Blog | Matt Chapman",
+  description: "Thoughts on web development, technology, and what I'm building."
 }
 
 export default async function BlogPage() {
@@ -14,12 +13,18 @@ export default async function BlogPage() {
 
   return (
     <div className={styles.page}>
-      <h3 className={styles.titleText}>Blog Posts</h3>
-      {posts.map(post => (
-        <div className={styles.postWrapper} key={post.slug}>
-          <Link className={styles.link} href={`/blog/${post.slug}`}>{post.title}</Link>
-        </div>
-      ))}
+      <header className={styles.header}>
+        <h1>Blog</h1>
+        <p>Thoughts on web development, technology, and what I&apos;m building.</p>
+      </header>
+      <div className={styles.postList}>
+        {posts.map(post => (
+          <article className={styles.postCard} key={post.slug}>
+            <Link className={styles.link} href={`/blog/${post.slug}`}>{post.title}</Link>
+            <p className={styles.excerpt}>Read more about {post.title.toLowerCase()}.</p>
+          </article>
+        ))}
+      </div>
     </div>
   )
 }
