@@ -7,20 +7,16 @@ export function NavBar() {
   return (
     <div className={styles.menuWrapper}>
       <div className={styles.menuContainer}>
-        <Link href="/">
-          Home
-        </Link>
-        <Link href="/blog">
-          Blog
-        </Link>
-        <Link href="/resume">
-          Resume
-        </Link>
-        <Link href="mailto:mattchapmantech@gmail.com" target="_blank" rel="noopener noreferrer">
-          Contact Me
-        </Link>
-        <a href="https://github.com/chapmanm3" target="_blank" rel="noopener noreferrer">Github</a>
-        <a href="https://linkedin.com/in/matt-chapman1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div className={styles.navLinks}>
+          <Link href="/">Home</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/resume">Resume</Link>
+        </div>
+        <div className={styles.socialLinks}>
+          <a href="https://github.com/chapmanm3" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/matt-chapman1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <Link href="mailto:mattchapmantech@gmail.com">Contact</Link>
+        </div>
       </div>
     </div>
   );

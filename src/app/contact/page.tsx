@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import ContactForm from "../../components/ContactForm/ContactForm";
 
 export const metadata: Metadata = {
   title: "Matt Chapman's personal site contact form",
