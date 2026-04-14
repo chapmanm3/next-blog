@@ -9,7 +9,7 @@ interface DropDownProps {
   children?: React.ReactNode
 }
 
-const DropDown = ({ title, body, children, ...props }: DropDownProps) => {
+const DropDown = ({ title, body, children }: DropDownProps) => {
   const [ open, setOpen ] = useState<boolean>(false)
 
   const clickHandler = () => {
