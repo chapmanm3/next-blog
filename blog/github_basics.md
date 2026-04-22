@@ -20,7 +20,7 @@ system then you need to break out the git manual and begin reading, but in the b
 I mentioned in the previous section the term `remote repository`. You're probably a little confused as to what that means so lets dig into it. The remote repository refers to the copy of the code that
 lives anywhere but on your personal hard drive. If your computer were to explode today the remote would persist and you could pick up right where you left off with a new computer.
 The `remote` as you'll often hear it called exists as the primary source of truth for your software. It is the code that others will see if you give them access and it is the code that you will
-package, bundle, build, etc and eventually deploy to the world, again if you so choose, It is also the code, like we've mentioned that will persist if anything happens to your computer. The remote will
+package, bundle, build, etc and eventually deploy to the world, again if you so choose. It is also the code, like we've mentioned that will persist if anything happens to your computer. The remote will
 always be there and should be treated as such. Push things you want recorded in the remote, don't push things you dont. The terms (companies) we mentioned above "Github", "Gitlab", "Bitbucket", etc are
 all examples of different "providers" of `remotes`. This remote repository where I am writing this blog for example lives at `github.com/chapmanm3/next-blog` you'll notice the `github.com` portion of the URL.
 That is because I am using Github as my remote repository provider of choice. You most likely will as well unless for some reason you have a particularly strong reason to use something else most people just use github.
