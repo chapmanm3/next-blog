@@ -11,10 +11,25 @@
   max-width: 1000px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .content {
   padding: 8px 16px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .blogContainer {
+    max-width: 100%;
+  }
+
+  .content {
+    padding: 0;
+  }
 }
 
 .link {
