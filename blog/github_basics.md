@@ -52,4 +52,24 @@ These commits are unique and distinct states of the repository over time and can
 get the mental model of what they represent down you will have a much better idea of when a commit is ready to be made vs when a change is either too small or too large. A commit will represent a moment of the code in time so make sure
 before you create a commit you have the code in a state worth recording in time!
 
-### Branches
+### Branches and Pull Requests
+The last piece we'll briefly touch on, if you're working solo on a project you may not use these as much as a team does, but they're still good to know, are branches and pull requests. Imagine you have a document and that document has
+a table or a graph on it, maybe you want to try out a different graph in that spot, or to play around with formatting the table differently, but you don't want that to affect the current state of the document, you just want to
+try something out and throw it away if you don't like it. Now the example of a single document is a bit simple here, but stick with me. In this case if you were using git you can create what is called a "branch". A branch is a copy
+of the code at the point in time from where you "branched" off of. For example if you branched off of the document in this example and added the new table to your branch of the document and then later someone else adds a new page
+to the main branch of the document, your branch would not have the new page because it only contains the history of the main document up until the point you branched off. This is nice because it allows you to take a "copy" of the code
+or repo and do some experimenting. Now say your experimental branch is a success, Great!, now you need to get those changes back into the main document. You're going to want a "pull request", this is what is used to reguest changes
+from one branch get included in another. In our example you would create a pull request from your experiment branch into your main branch, and once merged, given there are no conflicts (thats for a different post), you can "merge"
+your experimental changes into the main branch and now they are part of the main document. On larger teams pull requests will often be reviewed by other members of the team and certain checks against the new code will be run
+to ensure quality. When its just you on a personal project they're less important and mostly good for practice, house keeping, and making your github stats look good.
+
+## Closing (TLDR)
+- You need to make an account for a git provider (Github is my recommendation)
+- `git init` to make a new repo
+- `git add .` to stage all changes
+- `git commit -m "message"` to create a commit from your staged changes
+- `git push` to push your changes to the remote
+
+And thats it! You now have all you need to start using git for version control like a real developer! Remember if you every get stuck, ask your agent, or google it, thats what we do.
+
+- Matt Chapman
