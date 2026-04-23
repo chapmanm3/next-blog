@@ -10,7 +10,7 @@ export const dynamicParams = false;
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const { default: Post } = await import(`/blog/${slug}.md`)
+  const { default: Post } = await import(`../../../../blog/${slug}.md`)
 
   return (
     <div className={styles.page}>
