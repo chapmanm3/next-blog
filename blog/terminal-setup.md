@@ -29,6 +29,7 @@ to give a shot, tip: you can install multiple and play around with them in paral
 and if I ever do then I will look elsewhere but until then this is the one I use.
 - [Kitty](https://sw.kovidgoyal.net/kitty/): Kitty is another I've seen mentioned feel free to give it a go.
 - [Ghostty](https://ghostty.org/): Ghostty is very new and seems to be the terminal of choice for many developers I know, if you want a popular req with lots of community support give it a shot.
+- [Warp](https://www.warp.dev/): Warp is a terminal for the new age, it feels less like a terminal and more like an application. It's not my cup of tea personally, but people like it and if it fits your flow it's a great tool!
 - and many others, feel free to look around and try as many as you want they can all be installed alongside eachother.
 
 ## Your next choice (Shell)
