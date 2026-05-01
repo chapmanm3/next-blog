@@ -62,3 +62,14 @@ get on my soapbox about the joys of neovim. All I can say is give it a shot you 
 Above are all the tools to get started using the terminal. In today's age of poorly optimized Electron apps the terminal is becoming a dying tool. I implore you to give it a shot if you have any motivation to do so. Once you get in there
 and begin to grasp the power and flexibility that the terminal and its associated tools provide you, you may begin to look at regular desktop applications as a bit more restrictive. I hope this blog has made you feel empowered enough
 to be even slightly less scared of the terminal or even inspired to try it out, either way theres no wrong way to learn something other than not trying at all!
+
+# Resources
+### Cheatsheets that I keep handy
+- [Tmux](https://tmuxcheatsheet.com)
+- [Vim/Neovim](https://vim.rtorr.com/)
+- [Git](https://education.github.com/git-cheat-sheet-education.pdf)
+
+### Inspo
+- [r/UnixPorn](https://www.reddit.com/r/unixporn/): It's SFW I promise, if you really want to see what the terminal can be thats a good place to look.
+- [OMZ Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/themes): If you do end up using zsh and omz the official wiki has a whole list of the themes they support. From very minimal all the way up to way more information than you'd
+ever need, they'll be one in there that is just right for you.
